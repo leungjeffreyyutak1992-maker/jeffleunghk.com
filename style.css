@@ -578,6 +578,25 @@
   margin-top: var(--space-3);
 }
 
+/* ===== DARK CARD TEXT OVERRIDES ===== */
+/* Cards with inline background (dark gradient cards) need white text */
+.article-card[style] .article-card__title {
+  color: #ffffff;
+}
+
+.article-card[style] .article-card__excerpt {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.article-card[style] .article-card__meta {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.article-card[style] .article-card__district,
+.article-card[style] .article-card__date {
+  color: rgba(255, 255, 255, 0.55);
+}
+
 /* ===== ARTICLE PAGE ===== */
 .article-page {
   max-width: var(--content-narrow);
