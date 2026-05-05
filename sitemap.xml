@@ -1,201 +1,333 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jeffleung-property.com/</loc>
-    <lastmod>2026-04-15</lastmod>
+    <loc>https://jeffleunghk.com/</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://jeffleung-property.com/#articles</loc>
-    <lastmod>2026-04-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://jeffleung-property.com/#faq</loc>
-    <lastmod>2026-04-15</lastmod>
+    <loc>https://jeffleunghk.com/mantin.html</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jeffleung-property.com/#about</loc>
-    <lastmod>2026-04-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://jeffleung-property.com/#contact</loc>
-    <lastmod>2026-04-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://jeffleunghk.com/#article-dynasty-court</loc>
-    <lastmod>2026-05-02</lastmod>
+    <loc>https://jeffleunghk.com/parc-palais.html</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jeffleunghk.com/#article-ho-lung-court</loc>
-    <lastmod>2026-05-02</lastmod>
+    <loc>https://jeffleunghk.com/victory-avenue.html</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jeffleunghk.com/#article-tins-court</loc>
-    <lastmod>2026-05-03</lastmod>
+    <loc>https://jeffleunghk.com/celestial-heights.html</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jeffleunghk.com/#article-grand-homm</loc>
-    <lastmod>2026-05-03</lastmod>
+    <loc>https://jeffleunghk.com/grand-excelsior.html</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jeffleunghk.com/#article-cloud-gate</loc>
-    <lastmod>2026-05-03</lastmod>
+    <loc>https://jeffleunghk.com/the-regalia.html</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jeffleunghk.com/#article-baffin-garden</loc>
-    <lastmod>2026-05-04</lastmod>
+    <loc>https://jeffleunghk.com/dragon-view.html</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jeffleunghk.com/#article-one-homantin</loc>
-    <lastmod>2026-05-04</lastmod>
+    <loc>https://jeffleunghk.com/onmantin.html</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jeffleunghk.com/#article-arbuthnot-terrace</loc>
-    <lastmod>2026-05-04</lastmod>
+    <loc>https://jeffleunghk.com/dunbar-place.html</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jeffleunghk.com/#article-kent-court</loc>
-    <lastmod>2026-05-04</lastmod>
+    <loc>https://jeffleunghk.com/carmel-on-the-hill.html</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jeffleunghk.com/#article-timber-house</loc>
-    <lastmod>2026-05-04</lastmod>
+    <loc>https://jeffleunghk.com/paxton.html</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jeffleunghk.com/#article-victory-avenue-1</loc>
-    <lastmod>2026-05-04</lastmod>
+    <loc>https://jeffleunghk.com/kadoorie-hill.html</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jeffleunghk.com/#article-han-ming</loc>
-    <lastmod>2026-05-04</lastmod>
+    <loc>https://jeffleunghk.com/homantin-hill-1.html</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jeffleunghk.com/#article-o-ming</loc>
-    <lastmod>2026-05-04</lastmod>
+    <loc>https://jeffleunghk.com/grampian.html</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jeffleunghk.com/#article-grandview-garden</loc>
-    <lastmod>2026-05-04</lastmod>
+    <loc>https://jeffleunghk.com/lasalle-road-1.html</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jeffleunghk.com/#article-yards-garden</loc>
-    <lastmod>2026-05-05</lastmod>
+    <loc>https://jeffleunghk.com/dragon-court.html</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jeffleunghk.com/#article-kings-park-hill</loc>
-    <lastmod>2026-05-05</lastmod>
+    <loc>https://jeffleunghk.com/zumurud.html</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jeffleunghk.com/#article-ayton</loc>
-    <lastmod>2026-05-05</lastmod>
+    <loc>https://jeffleunghk.com/yuyi.html</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jeffleunghk.com/#article-broadcast-hill</loc>
-    <lastmod>2026-05-05</lastmod>
+    <loc>https://jeffleunghk.com/beacon-garden.html</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jeffleunghk.com/#article-the-primrose</loc>
-    <lastmod>2026-05-05</lastmod>
+    <loc>https://jeffleunghk.com/beacon-hill-one.html</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jeffleunghk.com/#article-yau-one</loc>
-    <lastmod>2026-05-05</lastmod>
+    <loc>https://jeffleunghk.com/dynasty-heights.html</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jeffleunghk.com/#article-yau-flower-garden</loc>
-    <lastmod>2026-05-05</lastmod>
+    <loc>https://jeffleunghk.com/starview-court.html</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jeffleunghk.com/#article-begonia-road-62</loc>
-    <lastmod>2026-05-05</lastmod>
+    <loc>https://jeffleunghk.com/parc-inverness.html</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jeffleunghk.com/#article-la-salle-residence</loc>
-    <lastmod>2026-05-05</lastmod>
+    <loc>https://jeffleunghk.com/meridian-hill.html</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jeffleunghk.com/#article-kadooria</loc>
-    <lastmod>2026-05-05</lastmod>
+    <loc>https://jeffleunghk.com/one-mayfair.html</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jeffleunghk.com/#article-parker-mansion</loc>
-    <lastmod>2026-05-05</lastmod>
+    <loc>https://jeffleunghk.com/beverly-garden.html</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jeffleunghk.com/#article-grand-homm</loc>
-    <lastmod>2026-05-05</lastmod>
+    <loc>https://jeffleunghk.com/dynasty-court.html</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jeffleunghk.com/#article-julia-avenue-3</loc>
-    <lastmod>2026-05-05</lastmod>
+    <loc>https://jeffleunghk.com/ho-lung-court.html</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jeffleunghk.com/#article-kadoorie-lookout</loc>
-    <lastmod>2026-05-05</lastmod>
+    <loc>https://jeffleunghk.com/tins-court.html</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jeffleunghk.com/grand-homm.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jeffleunghk.com/cloud-gate.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jeffleunghk.com/baffin-garden.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jeffleunghk.com/one-homantin.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jeffleunghk.com/arbuthnot-terrace.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jeffleunghk.com/kent-court.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jeffleunghk.com/timber-house.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jeffleunghk.com/victory-avenue-1.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jeffleunghk.com/han-ming.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jeffleunghk.com/o-ming.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jeffleunghk.com/grandview-garden.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jeffleunghk.com/yards-garden.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jeffleunghk.com/kings-park-hill.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jeffleunghk.com/ayton.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jeffleunghk.com/broadcast-hill.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jeffleunghk.com/the-primrose.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jeffleunghk.com/yau-one.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jeffleunghk.com/yau-flower-garden.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jeffleunghk.com/begonia-road-62.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jeffleunghk.com/la-salle-residence.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jeffleunghk.com/kadooria.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jeffleunghk.com/parker-mansion.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jeffleunghk.com/grand-homm-2.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jeffleunghk.com/julia-avenue-3.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jeffleunghk.com/kadoorie-lookout.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 </urlset>
