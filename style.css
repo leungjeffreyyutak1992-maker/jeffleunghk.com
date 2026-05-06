@@ -972,3 +972,6 @@ a.article-card {
   color: inherit;
   cursor: pointer;
 }
+
+/* Allow text selection for copy-paste */
+* { user-select: text !important; -webkit-user-select: text !important; }
