@@ -25,4 +25,4 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
-Sitemap: https://jeffleung-property.com/sitemap.xml
+Sitemap: https://jeffleunghk.com/sitemap.xml
