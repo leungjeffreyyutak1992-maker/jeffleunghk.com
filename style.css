@@ -964,3 +964,11 @@
 @media (min-width: 768px) {
   .hide-desktop { display: none; }
 }
+
+/* Article card as anchor — remove underline, keep pointer */
+a.article-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
