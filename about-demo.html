@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>關於我 — 梁愈德 Jeff Leung</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    :root {
+      --wa-dark:  #075E54;
+      --wa-green: #25D366;
+      --wa-mid:   #128C7E;
+      --wa-text:  #111B21;
+      --wa-sub:   #667781;
+    }
+    body {
+      font-family: -apple-system,'Helvetica Neue',Arial,sans-serif;
+      color: var(--wa-text);
+      min-height: 100vh;
+      background-color: #f0f0f0;
+      background-image: url("/wa-bg.jpg");
+      background-repeat: repeat;
+      background-size: 320px auto;
+      background-attachment: fixed;
+      padding-bottom: 90px;
+    }
+
+    /* ── NAV ── */
+    .nav {
+      position: sticky; top:0; z-index:100;
+      background: var(--wa-dark);
+      display: flex; align-items:center; gap:10px;
+      padding: 10px 16px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    }
+    .nav__back { width:36px; height:36px; display:flex; align-items:center; justify-content:center; text-decoration:none; flex-shrink:0; }
+    .nav__back svg { width:22px; height:22px; fill:#fff; }
+    .nav__avatar { width:38px; height:38px; border-radius:50%; object-fit:cover; flex-shrink:0; }
+    .nav__name { flex:1; color:#fff; font-size:16px; font-weight:600; }
+    .nav__sub { color:rgba(255,255,255,0.72); font-size:11px; font-weight:400; display:block; margin-top:1px; }
+    .nav__wa { width:36px; height:36px; background:var(--wa-green); border-radius:50%; display:flex; align-items:center; justify-content:center; text-decoration:none; flex-shrink:0; }
+    .nav__wa svg { width:20px; height:20px; fill:#fff; }
+
+    /* ── PROFILE HEADER ── */
+    .profile-header {
+      background: var(--wa-dark);
+      padding: 28px 20px 32px;
+      text-align: center;
+      position: relative;
+    }
+    .profile-header__photo {
+      width: 96px; height: 96px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top center;
+      border: 3px solid rgba(255,255,255,0.35);
+      margin-bottom: 12px;
+    }
+    .profile-header__name { color:#fff; font-size:20px; font-weight:700; margin-bottom:3px; }
+    .profile-header__sub { color:rgba(255,255,255,0.65); font-size:12px; line-height:1.6; }
+
+    /* ── QUICK LINKS ── */
+    .quick-links {
+      display: flex; gap:10px;
+      padding: 14px 12px 0;
+    }
+    .quick-link {
+      flex:1; background:#fff;
+      border-radius:10px; padding:12px 8px;
+      text-align:center; text-decoration:none;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+      color: var(--wa-text);
+    }
+    .quick-link__icon { font-size:22px; margin-bottom:5px; }
+    .quick-link__label { font-size:11px; color:var(--wa-sub); font-weight:600; line-height:1.3; }
+
+    /* ── SECTION LABEL ── */
+    .section-label { padding:16px 16px 8px; font-size:12px; font-weight:700; color:var(--wa-mid); text-transform:uppercase; letter-spacing:0.8px; }
+
+    /* ── BIO CARD ── */
+    .bio-card {
+      margin: 0 12px;
+      background:#fff; border-radius:10px;
+      padding:16px 18px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+    }
+    .bio-card p {
+      font-size:14px; line-height:1.75;
+      color: var(--wa-text);
+      margin-bottom:10px;
+    }
+    .bio-card p:last-child { margin-bottom:0; }
+    .bio-card strong { color: var(--wa-dark); }
+
+    /* ── PHOTO GALLERY ── */
+    .gallery { padding: 0 12px; display:flex; flex-direction:column; gap:10px; }
+    .gallery-item {
+      background:#fff; border-radius:10px;
+      overflow:hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+    }
+    .gallery-item img {
+      width:100%; display:block;
+      object-fit:cover;
+      /* limit height so page doesn't get too tall */
+      max-height: 340px;
+      object-position: top center;
+    }
+    .gallery-item__caption {
+      padding: 10px 14px 12px;
+      font-size:13px; color:var(--wa-sub);
+      font-weight:500;
+      border-top: 1px solid rgba(0,0,0,0.05);
+    }
+
+    /* ── AREAS ── */
+    .areas-row { display:flex; gap:8px; padding:0 12px; }
+    .area-chip {
+      flex:1; background:#fff; border-radius:10px;
+      padding:14px 8px; text-align:center;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    }
+    .area-chip__name { font-size:15px; font-weight:700; color:var(--wa-dark); }
+    .area-chip__sub { font-size:11px; color:var(--wa-sub); margin-top:3px; }
+
+    /* ── CTA CARD ── */
+    .cta-card {
+      margin: 0 12px;
+      background: var(--wa-dark);
+      border-radius:10px;
+      padding:20px 18px;
+      text-align:center;
+      box-shadow: 0 2px 8px rgba(7,94,84,0.3);
+    }
+    .cta-card__title { color:#fff; font-size:15px; font-weight:700; margin-bottom:6px; }
+    .cta-card__sub { color:rgba(255,255,255,0.7); font-size:13px; margin-bottom:16px; line-height:1.5; }
+    .cta-card__btn {
+      display:inline-flex; align-items:center; gap:8px;
+      background: var(--wa-green); color:#fff;
+      font-size:14px; font-weight:700;
+      padding:12px 28px; border-radius:24px;
+      text-decoration:none;
+      box-shadow:0 2px 8px rgba(37,211,102,0.4);
+    }
+    .cta-card__btn svg { width:18px; height:18px; fill:#fff; }
+
+    /* ── FLOATING ── */
+    .float-bar { position:fixed; right:10px; top:50%; transform:translateY(-50%); z-index:200; display:flex; flex-direction:column; gap:6px; }
+    .float-btn { width:48px; display:flex; flex-direction:column; align-items:center; gap:3px; text-decoration:none; background:rgba(255,255,255,0.92); border-radius:10px; padding:7px 4px 5px; box-shadow:0 2px 8px rgba(0,0,0,0.18); }
+    .float-btn__icon { width:26px; height:26px; border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:800; color:#fff; flex-shrink:0; }
+    .float-btn__icon--yt { background:#FF0000; }
+    .float-btn__icon--ct { background:#D04A0A; }
+    .float-btn__icon--me { background:var(--wa-dark); }
+    .float-btn__icon--srch { background:var(--wa-mid); }
+    .float-btn__label { font-size:9px; color:var(--wa-sub); font-weight:600; text-align:center; line-height:1.2; white-space:nowrap; }
+
+    /* ── STICKY BOTTOM ── */
+    .sticky-cta { position:fixed; bottom:0; left:0; right:0; background:#fff; border-top:1px solid rgba(0,0,0,0.08); padding:10px 16px; display:flex; align-items:center; gap:12px; box-shadow:0 -2px 8px rgba(0,0,0,0.08); z-index:100; }
+    .sticky-cta__avatar { width:36px; height:36px; border-radius:50%; object-fit:cover; flex-shrink:0; }
+    .sticky-cta__name { font-size:13px; font-weight:600; color:var(--wa-text); }
+    .sticky-cta__license { font-size:11px; color:var(--wa-sub); }
+    .sticky-cta__btn { background:var(--wa-green); color:#fff; font-size:13px; font-weight:700; padding:9px 16px; border-radius:24px; text-decoration:none; white-space:nowrap; box-shadow:0 2px 6px rgba(37,211,102,0.4); display:flex; align-items:center; gap:6px; }
+    .sticky-cta__btn svg { width:16px; height:16px; fill:#fff; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="/home-demo.html" class="nav__back">
+      <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+    </a>
+    <img src="/jeff-demo.jpg" class="nav__avatar" alt="Jeff">
+    <div class="nav__name">梁愈德 Jeff Leung
+      <span class="nav__sub">中原地產 · S-514216 · +852-9252-8833</span>
+    </div>
+    <a href="https://wa.me/85292528833" class="nav__wa" target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    </a>
+  </nav>
+
+  <!-- PROFILE HEADER -->
+  <div class="profile-header">
+    <img src="/jeff-12.jpg" class="profile-header__photo" alt="Jeff Leung">
+    <div class="profile-header__name">梁愈德 Jeff Leung</div>
+    <div class="profile-header__sub">中原地產代理 · 牌照 S-514216<br>九龍塘 · 何文田 · 京士柏</div>
+  </div>
+
+  <!-- QUICK LINKS -->
+  <div class="quick-links">
+    <a class="quick-link" href="https://www.youtube.com/@jeffleung2131" target="_blank">
+      <div class="quick-link__icon">▶️</div>
+      <div class="quick-link__label">YouTube<br>頻道</div>
+    </a>
+    <a class="quick-link" href="https://hk.centanet.com/findproperty/agent-detail/Jeff-Leung_39184/info" target="_blank">
+      <div class="quick-link__icon">🏢</div>
+      <div class="quick-link__label">中原代理<br>檔案</div>
+    </a>
+    <a class="quick-link" href="https://wa.me/85292528833" target="_blank">
+      <div class="quick-link__icon">💬</div>
+      <div class="quick-link__label">WhatsApp<br>查詢</div>
+    </a>
+  </div>
+
+  <!-- BIO -->
+  <div class="section-label">關於我</div>
+  <div class="bio-card">
+    <p>我是梁愈德，<strong>中原地產代理</strong>，專注服務九龍塘、何文田、京士柏一帶的高端住宅市場，持有牌照 <strong>S-514216</strong>，入行超過十年。</p>
+    <p>我相信買樓不只是交易，而是一個影響家庭十年以上的決定。因此我的工作方式是：先深度了解屋苑的真實居住體驗，再為客戶配對最合適的選擇。</p>
+    <p>我在 YouTube 頻道製作<strong>屋苑深度評析</strong>系列，用真實數據和親身了解，分析每個屋苑的優勝之處與潛在風險，至今已發布 94 篇文章，覆蓋九龍城區及鄰近地區主要屋苑。</p>
+  </div>
+
+  <!-- PHOTOS -->
+  <div class="section-label">相片</div>
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="/jeff-12.jpg" alt="Jeff Leung — grey jacket">
+      <div class="gallery-item__caption">梁愈德 Jeff Leung</div>
+    </div>
+    <div class="gallery-item">
+      <img src="/jeff-11.jpg" alt="Jeff Leung — beige hoodie">
+      <div class="gallery-item__caption">梁愈德 Jeff Leung</div>
+    </div>
+    <div class="gallery-item">
+      <img src="/jeff-10.jpg" alt="Jeff Leung — navy henley">
+      <div class="gallery-item__caption">梁愈德 Jeff Leung</div>
+    </div>
+  </div>
+
+  <!-- SERVICE AREAS -->
+  <div class="section-label">主要服務地區</div>
+  <div class="areas-row">
+    <div class="area-chip">
+      <div class="area-chip__name">九龍塘</div>
+      <div class="area-chip__sub">41校網</div>
+    </div>
+    <div class="area-chip">
+      <div class="area-chip__name">何文田</div>
+      <div class="area-chip__sub">34校網</div>
+    </div>
+    <div class="area-chip">
+      <div class="area-chip__name">京士柏</div>
+      <div class="area-chip__sub">34校網</div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="section-label">聯絡我</div>
+  <div class="cta-card">
+    <div class="cta-card__title">有任何查詢，歡迎隨時WhatsApp</div>
+    <div class="cta-card__sub">找屋苑資料、睇樓安排、市場分析<br>一律免費解答</div>
+    <a class="cta-card__btn" href="https://wa.me/85292528833" target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      +852-9252-8833
+    </a>
+  </div>
+
+  <!-- FLOATING BUTTONS -->
+  <div class="float-bar">
+    <a class="float-btn" href="https://www.youtube.com/@jeffleung2131" target="_blank">
+      <div class="float-btn__icon float-btn__icon--yt"><svg viewBox="0 0 24 24" width="14" height="14" fill="#fff"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></div>
+      <span class="float-btn__label">YouTube</span>
+    </a>
+    <a class="float-btn" href="https://hk.centanet.com/findproperty/agent-detail/Jeff-Leung_39184/info" target="_blank">
+      <div class="float-btn__icon float-btn__icon--ct">中原</div>
+      <span class="float-btn__label">中原代理<br>檔案</span>
+    </a>
+    <a class="float-btn" href="/about-demo.html">
+      <div class="float-btn__icon float-btn__icon--me"><svg viewBox="0 0 24 24" width="14" height="14" fill="#fff"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg></div>
+      <span class="float-btn__label">關於我</span>
+    </a>
+    <a class="float-btn" href="/search-demo.html">
+      <div class="float-btn__icon float-btn__icon--srch"><svg viewBox="0 0 24 24" width="14" height="14" fill="#fff"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></div>
+      <span class="float-btn__label">搜尋<br>文章</span>
+    </a>
+  </div>
+
+  <!-- STICKY BOTTOM -->
+  <div class="sticky-cta">
+    <img src="/jeff-demo.jpg" class="sticky-cta__avatar" alt="Jeff">
+    <div style="flex:1"><div class="sticky-cta__name">梁愈德 Jeff Leung</div><div class="sticky-cta__license">中原地產 · S-514216 · +852-9252-8833</div></div>
+    <a href="https://wa.me/85292528833" class="sticky-cta__btn" target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      WhatsApp 查詢
+    </a>
+  </div>
+
+</body>
+</html>
