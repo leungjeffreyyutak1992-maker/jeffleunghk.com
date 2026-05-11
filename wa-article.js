@@ -32,39 +32,21 @@
   const fabBar = document.createElement('div');
   fabBar.id = 'wa-fab-bar';
   fabBar.innerHTML = `
-    <a class="wa-fab-btn wa-fab-btn--yt"
-       href="https://www.youtube.com/@jeffleung2131"
-       target="_blank" rel="noopener"
-       aria-label="YouTube 頻道"
-       data-tip="YouTube 頻道">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-      </svg>
+    <a class="float-btn" href="https://www.youtube.com/@jeffleung2131" target="_blank" rel="noopener">
+      <div class="float-btn__icon float-btn__icon--yt"><svg viewBox="0 0 24 24" width="14" height="14" fill="#fff"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></div>
+      <span class="float-btn__label">YouTube</span>
     </a>
-    <a class="wa-fab-btn wa-fab-btn--cen"
-       href="https://hk.centanet.com/findproperty/agent-detail/Jeff-Leung_39184/info"
-       target="_blank" rel="noopener"
-       aria-label="中原代理檔案"
-       data-tip="中原代理檔案">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-      </svg>
+    <a class="float-btn" href="https://hk.centanet.com/findproperty/agent-detail/Jeff-Leung_39184/info" target="_blank" rel="noopener">
+      <div class="float-btn__icon float-btn__icon--ct">中原</div>
+      <span class="float-btn__label">中原代理<br>檔案</span>
     </a>
-    <a class="wa-fab-btn wa-fab-btn--about"
-       href="/about.html"
-       aria-label="關於我"
-       data-tip="關於我">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
-      </svg>
+    <a class="float-btn" href="/about.html">
+      <div class="float-btn__icon float-btn__icon--me"><svg viewBox="0 0 24 24" width="14" height="14" fill="#fff"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg></div>
+      <span class="float-btn__label">關於我</span>
     </a>
-    <a class="wa-fab-btn wa-fab-btn--info"
-       href="/info.html"
-       aria-label="搜尋或瀏覽文章"
-       data-tip="搜尋或瀏覽文章">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
-      </svg>
+    <a class="float-btn" href="/info.html">
+      <div class="float-btn__icon float-btn__icon--srch"><svg viewBox="0 0 24 24" width="14" height="14" fill="#fff"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></div>
+      <span class="float-btn__label">搜尋或<br>瀏覽文章</span>
     </a>
   `;
   document.body.appendChild(fabBar);
