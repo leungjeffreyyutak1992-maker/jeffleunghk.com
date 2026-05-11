@@ -297,66 +297,63 @@ a.whatsapp-float {
 }
 
 /* ===== INJECTED FLOATING BUTTON BAR (via wa-article.js) ===== */
+/* Same style as about.html / info.html float-bar */
 #wa-fab-bar {
   position: fixed;
-  right: 16px;
-  bottom: 96px; /* above sticky CTA */
-  z-index: 90;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 200;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 6px;
 }
 
-.wa-fab-btn {
+/* Reuse .float-btn classes from about/info pages */
+.float-btn {
   width: 48px;
-  height: 48px;
-  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  text-decoration: none;
+  background: rgba(255,255,255,0.92);
+  border-radius: 10px;
+  padding: 7px 4px 5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+
+.float-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.24);
+}
+
+.float-btn__icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.22);
-  transition: transform 0.18s, box-shadow 0.18s;
-  position: relative;
-}
-
-.wa-fab-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 5px 16px rgba(0,0,0,0.3);
-}
-
-.wa-fab-btn svg {
-  width: 22px;
-  height: 22px;
-  fill: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  color: #fff;
   flex-shrink: 0;
 }
 
-.wa-fab-btn--yt   { background: #FF0000; }
-.wa-fab-btn--cen  { background: #E07B00; }
-.wa-fab-btn--about { background: #075E54; }
-.wa-fab-btn--info  { background: #25D366; }
+.float-btn__icon--yt   { background: #FF0000; }
+.float-btn__icon--ct   { background: #D04A0A; }
+.float-btn__icon--me   { background: #075E54; }
+.float-btn__icon--srch { background: #25D366; }
 
-/* Tooltip */
-.wa-fab-btn::before {
-  content: attr(data-tip);
-  position: absolute;
-  right: 56px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.75);
-  color: #fff;
-  font-size: 12px;
+.float-btn__label {
+  font-size: 9px;
+  color: #667781;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.2;
   white-space: nowrap;
-  padding: 4px 10px;
-  border-radius: 6px;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.15s;
-}
-
-.wa-fab-btn:hover::before {
-  opacity: 1;
 }
 
 /* ===== INJECTED STICKY BOTTOM CTA (via wa-article.js) ===== */
