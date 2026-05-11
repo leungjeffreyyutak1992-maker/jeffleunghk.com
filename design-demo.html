@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo — Jeff Leung</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --wa-dark:  #075E54;
+      --wa-green: #25D366;
+      --wa-mid:   #128C7E;
+      --wa-text:  #111B21;
+      --wa-sub:   #667781;
+    }
+    body {
+      font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif;
+      color: var(--wa-text);
+      min-height: 100vh;
+      background-color: #f0f0f0;
+      background-image: url("wa-bg.jpg");
+      background-repeat: repeat;
+      background-size: 320px auto;
+      background-attachment: fixed;
+    }
+
+    /* ── NAV ── */
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--wa-dark);
+      display: flex; align-items: center; gap: 10px;
+      padding: 10px 16px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    }
+    .nav__back { background:none; border:none; color:#fff; font-size:24px; cursor:pointer; padding:0 4px 0 0; line-height:1; display:none; }
+    .nav__avatar { width:38px; height:38px; border-radius:50%; object-fit:cover; flex-shrink:0; }
+    .nav__name { flex:1; color:#fff; font-size:16px; font-weight:600; }
+    .nav__sub { color:rgba(255,255,255,0.72); font-size:12px; font-weight:400; display:block; margin-top:1px; }
+    .nav__wa { width:36px; height:36px; background:var(--wa-green); border-radius:50%; display:flex; align-items:center; justify-content:center; text-decoration:none; flex-shrink:0; }
+    .nav__wa svg { width:20px; height:20px; fill:#fff; }
+
+    /* ── HERO ── */
+    .hero { background:var(--wa-dark); padding:28px 20px 32px; text-align:center; }
+    .hero__title { color:#fff; font-size:21px; font-weight:700; line-height:1.3; margin-bottom:6px; }
+    .hero__sub { color:rgba(255,255,255,0.72); font-size:13px; }
+
+    /* ── SECTION ── */
+    .section-label { padding:16px 16px 8px; font-size:12px; font-weight:700; color:var(--wa-mid); text-transform:uppercase; letter-spacing:0.8px; }
+
+    /* ── CARDS — unified #075E54 ── */
+    .card-list { padding:0 12px 100px; display:flex; flex-direction:column; gap:10px; }
+    .card { background:#fff; border-radius:10px; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.15); text-decoration:none; color:inherit; display:block; }
+    .card__img { width:100%; height:72px; background:var(--wa-dark); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:700; letter-spacing:0.5px; }
+    .card__body { padding:10px 14px 12px; }
+    .card__tag { font-size:11px; color:var(--wa-mid); font-weight:600; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:4px; }
+    .card__title { font-size:14px; font-weight:600; color:var(--wa-text); line-height:1.45; margin-bottom:6px; }
+    .card__meta { font-size:11px; color:var(--wa-sub); }
+
+    /* ── RIGHT FLOATING BUTTONS ── */
+    .float-bar {
+      position: fixed;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 200;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .float-btn {
+      width: 48px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      text-decoration: none;
+      background: rgba(255,255,255,0.92);
+      border-radius: 10px;
+      padding: 7px 4px 5px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    }
+    .float-btn__icon {
+      width: 26px;
+      height: 26px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 900;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .float-btn__icon--yt  { background: #FF0000; }
+    .float-btn__icon--ct  { background: #D04A0A; font-size:10px; font-weight:800; letter-spacing:-0.5px; }
+    .float-btn__icon--me  { background: var(--wa-dark); }
+    .float-btn__icon--srch { background: var(--wa-mid); }
+    .float-btn__label {
+      font-size: 9px;
+      color: var(--wa-sub);
+      font-weight: 600;
+      text-align: center;
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+
+    /* ── ARTICLE ── */
+    .article-page { display:none; }
+    .article-page.active { display:block; }
+    .home-page.hidden { display:none; }
+    .article-hero { background:#fff; padding:24px 18px 20px; margin:12px 12px 8px; border-radius:10px; box-shadow:0 1px 4px rgba(0,0,0,0.12); }
+    .article-hero__tag { font-size:11px; font-weight:700; color:var(--wa-green); text-transform:uppercase; letter-spacing:0.8px; margin-bottom:8px; }
+    .article-hero__title { font-size:20px; font-weight:700; color:var(--wa-dark); line-height:1.35; margin-bottom:6px; }
+    .article-hero__meta { font-size:12px; color:var(--wa-sub); }
+    .article-body { background:#fff; margin:0 12px 100px; border-radius:10px; padding:16px 18px; box-shadow:0 1px 4px rgba(0,0,0,0.12); }
+    .article-body h2 { font-size:15px; font-weight:700; color:var(--wa-dark); margin:16px 0 8px; padding-bottom:4px; border-bottom:2px solid var(--wa-green); display:inline-block; }
+    .article-body p { font-size:14px; line-height:1.7; color:var(--wa-text); margin-bottom:12px; }
+
+    /* ── STICKY BOTTOM ── */
+    .sticky-cta { position:fixed; bottom:0; left:0; right:0; background:#fff; border-top:1px solid rgba(0,0,0,0.08); padding:10px 16px; display:flex; align-items:center; gap:12px; box-shadow:0 -2px 8px rgba(0,0,0,0.08); z-index:100; }
+    .sticky-cta__avatar { width:36px; height:36px; border-radius:50%; object-fit:cover; flex-shrink:0; }
+    .sticky-cta__name { font-size:13px; font-weight:600; color:var(--wa-text); }
+    .sticky-cta__license { font-size:11px; color:var(--wa-sub); }
+    .sticky-cta__btn { background:var(--wa-green); color:#fff; font-size:13px; font-weight:700; padding:9px 16px; border-radius:24px; text-decoration:none; white-space:nowrap; box-shadow:0 2px 6px rgba(37,211,102,0.4); display:flex; align-items:center; gap:6px; }
+    .sticky-cta__btn svg { width:16px; height:16px; fill:#fff; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <button class="nav__back" id="backBtn">&#8592;</button>
+    <img src="jeff.jpg" alt="Jeff Leung" class="nav__avatar">
+    <div class="nav__name">梁愈德 Jeff Leung<span class="nav__sub" id="navSub">中原地產 · 九龍塘 · 何文田 · 京士柏</span></div>
+    <a href="https://wa.me/85292528833" class="nav__wa" target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    </a>
+  </nav>
+
+  <!-- RIGHT FLOATING BUTTONS -->
+  <div class="float-bar">
+    <a class="float-btn" href="https://www.youtube.com/@jeffleunghk" target="_blank">
+      <div class="float-btn__icon float-btn__icon--yt">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="#fff"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      </div>
+      <span class="float-btn__label">YouTube</span>
+    </a>
+    <a class="float-btn" href="https://hk.centanet.com" target="_blank">
+      <div class="float-btn__icon float-btn__icon--ct">中原</div>
+      <span class="float-btn__label">中原<br>檔案</span>
+    </a>
+    <a class="float-btn" href="/about.html">
+      <div class="float-btn__icon float-btn__icon--me">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="#fff"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+      </div>
+      <span class="float-btn__label">關於我</span>
+    </a>
+    <a class="float-btn" href="/info.html">
+      <div class="float-btn__icon float-btn__icon--srch">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="#fff"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+      </div>
+      <span class="float-btn__label">搜尋<br>文章</span>
+    </a>
+  </div>
+
+  <!-- HOME PAGE -->
+  <div class="home-page" id="homePage">
+    <div class="hero">
+      <div class="hero__title">九龍塘 · 何文田 · 京士柏<br>屋苑深度評析</div>
+      <div class="hero__sub">梁愈德 Jeff Leung · 中原地產 S-514216</div>
+    </div>
+    <div class="section-label">最新文章</div>
+    <div class="card-list">
+      <a class="card" href="#" onclick="showArticle(event)">
+        <div class="card__img">嘉琳</div>
+        <div class="card__body"><div class="card__tag">屋苑深度評析</div><div class="card__title">嘉琳：九龍塘唯一有電梯洋房，紐約Townhouse概念在香港的完美實踐</div><div class="card__meta">梁愈德 · 2026年5月</div></div>
+      </a>
+      <a class="card" href="#" onclick="showArticle(event)">
+        <div class="card__img">Whitesand Cove</div>
+        <div class="card__body"><div class="card__tag">屋苑深度評析</div><div class="card__title">Whitesand Cove：白沙灣15年來唯一臨海新盤，你買的不是投資，是一種生活方式</div><div class="card__meta">梁愈德 · 2026年5月</div></div>
+      </a>
+      <a class="card" href="#" onclick="showArticle(event)">
+        <div class="card__img">Park College</div>
+        <div class="card__body"><div class="card__tag">屋苑深度評析</div><div class="card__title">Park College：書院道8號，九龍城邊皮地段的向南迷思與真實居住價值</div><div class="card__meta">梁愈德 · 2026年5月</div></div>
+      </a>
+      <a class="card" href="#" onclick="showArticle(event)">
+        <div class="card__img">Beacon Peak</div>
+        <div class="card__body"><div class="card__tag">屋苑深度評析</div><div class="card__title">Beacon Peak：畢架山頂的景觀豪宅，交通代價與絕景私隱的終極取捨</div><div class="card__meta">梁愈德 · 2026年5月</div></div>
+      </a>
+    </div>
+  </div>
+
+  <!-- ARTICLE PAGE -->
+  <div class="article-page" id="articlePage">
+    <div class="article-hero">
+      <div class="article-hero__tag">屋苑深度評析</div>
+      <div class="article-hero__title">嘉琳：九龍塘唯一有電梯洋房，紐約Townhouse概念在香港的完美實踐</div>
+      <div class="article-hero__meta">梁愈德 Jeff Leung · 2026年5月</div>
+    </div>
+    <div class="article-body">
+      <h2>引言</h2>
+      <p>嘉琳是香港極少數在闊度上符合紐約Townhouse標準的鬧市獨立洋房。紐約的標準Brownstone Townhouse闊度約為20英尺，即6.1米；嘉琳的最細一幢已達6.4米，超越這個基準。</p>
+      <h2>頂級豪宅三角選擇</h2>
+      <p>香港頂級豪宅市場存在一個三角：大平層、有電梯複式、有電梯洋房。嘉琳的室內電梯直接解決了洋房的核心矛盾——電梯貫通三層及天台，完全不需要走樓梯，同時保留洋房三層複式的空間層次感。</p>
+      <h2>硬件配置</h2>
+      <p>每幢洋房實用面積4,171至4,578平方呎，5房5套三層複式，室內電梯直達天台。屋苑中心設庭院，引入自然採光。5幢5伙，捷盛物業管理。</p>
+    </div>
+  </div>
+
+  <!-- STICKY BOTTOM -->
+  <div class="sticky-cta">
+    <img src="jeff.jpg" alt="Jeff Leung" class="sticky-cta__avatar">
+    <div style="flex:1"><div class="sticky-cta__name">梁愈德 Jeff Leung</div><div class="sticky-cta__license">中原地產 · S-514216</div></div>
+    <a href="https://wa.me/85292528833" class="sticky-cta__btn" target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      WhatsApp 查詢
+    </a>
+  </div>
+
+  <script>
+    function showArticle(e) {
+      e.preventDefault();
+      document.getElementById('homePage').classList.add('hidden');
+      document.getElementById('articlePage').classList.add('active');
+      document.getElementById('backBtn').style.display = 'block';
+      document.getElementById('navSub').textContent = '嘉琳（嘉林邊道2號）';
+      window.scrollTo(0,0);
+    }
+    document.getElementById('backBtn').addEventListener('click', function() {
+      document.getElementById('homePage').classList.remove('hidden');
+      document.getElementById('articlePage').classList.remove('active');
+      document.getElementById('backBtn').style.display = 'none';
+      document.getElementById('navSub').textContent = '中原地產 · 九龍塘 · 何文田 · 京士柏';
+      window.scrollTo(0,0);
+    });
+  </script>
+</body>
+</html>
