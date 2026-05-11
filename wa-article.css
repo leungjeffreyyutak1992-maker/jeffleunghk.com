@@ -24,6 +24,11 @@ nav.nav {
   display: none !important;
 }
 
+/* ===== HIDE OLD SITE-HEADER (some legacy articles) ===== */
+header.site-header {
+  display: none !important;
+}
+
 /* ===== INJECTED WA NAV (via wa-article.js) ===== */
 #wa-nav {
   position: fixed;
