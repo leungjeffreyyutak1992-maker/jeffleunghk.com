@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-    <meta name="msvalidate.01" content="BC29E4C608E221B96A7358D02356B31E" />
+  <meta name="msvalidate.01" content="BC29E4C608E221B96A7358D02356B31E" />
   <meta charset="UTF-8">
   <meta name="google-site-verification" content="9NwRJ2S22F-LP8grvZBsMoB6lO5iQ34ZimiMdKXGwDw" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>梁愈德 Jeff Leung — 香港地產代理 | 中原地產</title>
-  <meta name="description" content="梁愈德 Jeff Leung，中原地產持牌營業員（牌照號碼 S-514216），專注全港住宅物業買賣及租賃。首次置業、換樓、投資、內地來港置業一站式服務。WhatsApp 即時諮詢。">
-  <meta name="keywords" content="香港地產代理, 梁愈德, Jeff Leung, 中原地產, 買樓, 首次置業, 換樓, 物業投資, 地產經紀">
+  <meta name="description" content="梁愈德 Jeff Leung，中原地產持牌營業員（牌照號碼 S-514216），專注九龍塘、何文田、京士柏住宅物業買賣。94篇屋苑深度評析，WhatsApp 即時諮詢。">
+  <meta name="keywords" content="香港地產代理, 梁愈德, Jeff Leung, 中原地產, 九龍塘, 何文田, 京士柏, 屋苑評析, 買樓">
   <meta name="author" content="梁愈德 Jeff Leung">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://jeffleunghk.com/">
 
   <!-- Open Graph -->
   <meta property="og:title" content="梁愈德 Jeff Leung — 香港地產代理 | 中原地產">
-  <meta property="og:description" content="中原地產持牌營業員，專注全港住宅物業買賣及租賃。首次置業、換樓、投資、內地來港置業一站式服務。">
+  <meta property="og:description" content="中原地產持牌營業員，專注九龍塘、何文田、京士柏住宅物業。94篇屋苑深度評析。">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="zh_HK">
+  <meta property="og:image" content="https://jeffleunghk.com/jeff-og.jpg">
 
   <!-- Schema.org Structured Data — RealEstateAgent -->
   <script type="application/ld+json">
@@ -25,7 +26,7 @@
     "@type": "RealEstateAgent",
     "name": "梁愈德 Jeff Leung",
     "alternateName": "Jeff Leung",
-    "description": "香港中原地產持牌營業員（牌照號碼 S-514216），專注何文田、九龍塔、京士柏住宅物業買賣，為首次置業者、換樓客、投資者及內地來港人士提供專業地產服務。",
+    "description": "香港中原地產持牌營業員（牌照號碼 S-514216），專注九龍塘、何文田、京士柏住宅物業買賣，為首次置業者、換樓客、投資者及內地來港人士提供專業地產服務。",
     "url": "https://jeffleunghk.com",
     "telephone": "+852-92528833",
     "email": "leungjeffreyyutak1992@gmail.com",
@@ -36,8 +37,8 @@
       "addressCountry": "HK"
     },
     "areaServed": [
+      {"@type": "Place", "name": "九龍塘 Kowloon Tong"},
       {"@type": "Place", "name": "何文田 Ho Man Tin"},
-      {"@type": "Place", "name": "九龍塔 Kowloon Tong"},
       {"@type": "Place", "name": "京士柏 King's Park"},
       {"@type": "Place", "name": "土瓜灣 To Kwa Wan"},
       {"@type": "Place", "name": "九龍城 Kowloon City"},
@@ -56,15 +57,8 @@
         "url": "https://www.centaline.com.hk"
       },
       "knowsAbout": [
-        "香港住宅物業買賣",
-        "首次置業",
-        "換樓策略",
-        "物業投資分析",
-        "內地人士來港置業",
-        "按揭及政府補貼",
-        "何文田屋苑",
-        "九龍塔屋苑",
-        "京士柏屋苑"
+        "香港住宅物業買賣", "首次置業", "換樓策略", "物業投資分析",
+        "內地人士來港置業", "九龍塘屋苑", "何文田屋苑", "京士柏屋苑"
       ],
       "knowsLanguage": ["zh-Hant", "zh-Hans", "en", "yue"]
     },
@@ -95,252 +89,239 @@
   }
   </script>
 
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    :root {
+      --wa-dark:  #075E54;
+      --wa-green: #25D366;
+      --wa-mid:   #128C7E;
+      --wa-text:  #111B21;
+      --wa-sub:   #667781;
+    }
+    body {
+      font-family: -apple-system,'Helvetica Neue',Arial,sans-serif;
+      color: var(--wa-text);
+      min-height: 100vh;
+      background-color: #f0f0f0;
+      background-image: url("/wa-bg.jpg");
+      background-repeat: repeat;
+      background-size: 320px auto;
+      background-attachment: fixed;
+      padding-bottom: 80px;
+    }
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300..700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    /* ── NAV ── */
+    .nav {
+      position: sticky; top:0; z-index:100;
+      background: var(--wa-dark);
+      display: flex; align-items:center; gap:10px;
+      padding: 10px 16px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    }
+    .nav__avatar { width:38px; height:38px; border-radius:50%; object-fit:cover; flex-shrink:0; }
+    .nav__name { flex:1; color:#fff; font-size:16px; font-weight:600; line-height:1.2; }
+    .nav__sub { color:rgba(255,255,255,0.72); font-size:11px; font-weight:400; display:block; margin-top:1px; }
+    .nav__wa { width:36px; height:36px; background:var(--wa-green); border-radius:50%; display:flex; align-items:center; justify-content:center; text-decoration:none; flex-shrink:0; }
+    .nav__wa svg { width:20px; height:20px; fill:#fff; }
 
-  <link rel="stylesheet" href="./base.css">
-  <link rel="stylesheet" href="./style.css">
+    /* ── HERO ── */
+    .hero {
+      background: var(--wa-dark);
+      padding: 32px 20px 36px;
+      text-align: center;
+    }
+    .hero__photo {
+      width: 110px; height: 110px;
+      border-radius: 50%;
+      object-fit: cover; object-position: top center;
+      border: 3px solid rgba(255,255,255,0.3);
+      margin-bottom: 14px;
+    }
+    .hero__name { color:#fff; font-size:22px; font-weight:700; margin-bottom:4px; }
+    .hero__license { color:rgba(255,255,255,0.65); font-size:12px; margin-bottom:14px; }
+    .hero__tags { display:flex; flex-wrap:wrap; gap:6px; justify-content:center; }
+    .hero__tag {
+      background: rgba(255,255,255,0.15);
+      color:#fff; font-size:12px;
+      padding:4px 12px; border-radius:20px;
+    }
+
+    /* ── STATS ── */
+    .stats { display:flex; gap:8px; padding:12px 12px 0; }
+    .stat {
+      flex:1; background:#fff; border-radius:10px;
+      padding:14px 8px; text-align:center;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    }
+    .stat__num { font-size:22px; font-weight:800; color:var(--wa-dark); line-height:1; }
+    .stat__label { font-size:11px; color:var(--wa-sub); margin-top:4px; }
+
+    /* ── SECTION LABEL ── */
+    .section-label { padding:16px 16px 8px; font-size:12px; font-weight:700; color:var(--wa-mid); text-transform:uppercase; letter-spacing:0.8px; }
+
+    /* ── CARDS ── */
+    .card-list { padding:0 12px; display:flex; flex-direction:column; gap:10px; }
+    .card { background:#fff; border-radius:10px; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.15); text-decoration:none; color:inherit; display:block; }
+    .card__img { width:100%; height:72px; background:var(--wa-dark); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:700; }
+    .card__body { padding:10px 14px 12px; }
+    .card__tag { font-size:11px; color:var(--wa-mid); font-weight:600; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:4px; }
+    .card__title { font-size:14px; font-weight:600; color:var(--wa-text); line-height:1.45; margin-bottom:6px; }
+    .card__meta { font-size:11px; color:var(--wa-sub); }
+
+    /* ── VIEW ALL ── */
+    .view-all {
+      display:block; margin:14px 12px 0;
+      background:#fff; border-radius:10px;
+      padding:14px; text-align:center;
+      text-decoration:none; color:var(--wa-dark);
+      font-size:14px; font-weight:700;
+      box-shadow:0 1px 3px rgba(0,0,0,0.12);
+      border: 1.5px solid var(--wa-dark);
+    }
+
+    /* ── YOUTUBE ── */
+    .yt-section { margin:16px 12px 0; }
+    .yt-card {
+      background:#fff; border-radius:10px;
+      overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.15);
+      text-decoration:none; color:inherit; display:block;
+    }
+    .yt-card__thumb {
+      width:100%; height:140px;
+      background: linear-gradient(135deg,#1a1a2e,#c0392b);
+      display:flex; align-items:center; justify-content:center;
+    }
+    .yt-play {
+      width:52px; height:52px;
+      background:rgba(255,0,0,0.9); border-radius:50%;
+      display:flex; align-items:center; justify-content:center;
+    }
+    .yt-play svg { width:24px; height:24px; fill:#fff; margin-left:3px; }
+    .yt-card__body { padding:12px 14px; }
+    .yt-card__label { font-size:11px; color:#FF0000; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:4px; }
+    .yt-card__title { font-size:14px; font-weight:600; color:var(--wa-text); line-height:1.4; }
+
+    /* ── FLOATING ── */
+    .float-bar { position:fixed; right:10px; top:50%; transform:translateY(-50%); z-index:200; display:flex; flex-direction:column; gap:6px; }
+    .float-btn { width:48px; display:flex; flex-direction:column; align-items:center; gap:3px; text-decoration:none; background:rgba(255,255,255,0.92); border-radius:10px; padding:7px 4px 5px; box-shadow:0 2px 8px rgba(0,0,0,0.18); }
+    .float-btn__icon { width:26px; height:26px; border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:800; color:#fff; flex-shrink:0; }
+    .float-btn__icon--yt { background:#FF0000; }
+    .float-btn__icon--ct { background:#D04A0A; }
+    .float-btn__icon--me { background:var(--wa-dark); }
+    .float-btn__icon--srch { background:var(--wa-mid); }
+    .float-btn__label { font-size:9px; color:var(--wa-sub); font-weight:600; text-align:center; line-height:1.2; white-space:nowrap; }
+
+    /* ── STICKY BOTTOM ── */
+    .sticky-cta { position:fixed; bottom:0; left:0; right:0; background:#fff; border-top:1px solid rgba(0,0,0,0.08); padding:10px 16px; display:flex; align-items:center; gap:12px; box-shadow:0 -2px 8px rgba(0,0,0,0.08); z-index:100; }
+    .sticky-cta__avatar { width:36px; height:36px; border-radius:50%; object-fit:cover; flex-shrink:0; }
+    .sticky-cta__name { font-size:13px; font-weight:600; color:var(--wa-text); }
+    .sticky-cta__license { font-size:11px; color:var(--wa-sub); }
+    .sticky-cta__btn { background:var(--wa-green); color:#fff; font-size:13px; font-weight:700; padding:9px 16px; border-radius:24px; text-decoration:none; white-space:nowrap; box-shadow:0 2px 6px rgba(37,211,102,0.4); display:flex; align-items:center; gap:6px; }
+    .sticky-cta__btn svg { width:16px; height:16px; fill:#fff; }
+  </style>
 </head>
 <body>
-<header class="header">
-    <div class="container header__inner">
-      <a href="/" class="header__logo">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
-          <rect width="36" height="36" rx="8" fill="var(--color-primary)"/>
-          <path d="M8 22V14l10-6 10 6v8" stroke="var(--color-text-inverse)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M14 22v-6h8v6" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <line x1="18" y1="16" x2="18" y2="22" stroke="var(--color-accent)" stroke-width="2"/>
-        </svg>
-        <span>
-          <span class="header__logo-text">梁愈德</span>
-          <span class="header__logo-sub">Jeff Leung · 中原地產</span>
-        </span>
-      </a>
 
-      <nav class="header__nav" id="mainNav" aria-label="主要導覽">
-        <a href="/" class="active" data-page="home">首頁</a>
-        <a href="/info.html" data-page="articles">地產資訊</a>
-        <a href="/about.html" data-page="about">關於我</a>
-        <a href="/contact.html" data-page="contact">聯絡</a>
-      </nav>
-
-      <div class="header__actions">
-        <button class="theme-toggle" data-theme-toggle aria-label="切換深色模式">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        </button>
-        <button class="hamburger hide-desktop" onclick="document.getElementById('mainNav').classList.toggle('is-open')" aria-label="開啟選單">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-        </button>
-      </div>
+  <nav class="nav">
+    <img src="/jeff-demo.jpg" class="nav__avatar" alt="Jeff">
+    <div class="nav__name">梁愈德 Jeff Leung
+      <span class="nav__sub">中原地產 · S-514216 · +852-9252-8833</span>
     </div>
-  </header>
-  <main id="main">
-<div id="page-home" class="page">
-      <!-- Hero -->
-      <section class="hero">
-        <div class="container">
-          <div class="hero__grid">
-            <div>
-              <div class="hero__badge">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                持牌地產營業員 · 牌照號碼 S-514216
-              </div>
-              <h1 class="hero__title">香港買樓、換樓、投資<br>一站式專業服務</h1>
-              <p class="hero__subtitle">我係梁愈德（Jeff Leung），中原地產持牌營業員。無論你係首次置業、換樓、投資或從內地來港置業，我都會用最專業嘅態度幫你搵到最適合嘅物業。</p>
-              <div class="hero__cta-group">
-                <a href="https://wa.me/85292528833?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2%E7%89%A9%E6%A5%AD%E8%B3%87%E8%A8%8A" class="btn btn--whatsapp" target="_blank" rel="noopener noreferrer">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                  WhatsApp 即時查詢
-                </a>
-                <a href="#" href="/info.html" class="btn btn--outline">瀏覽地產資訊</a>
-              </div>
-            </div>
-            <div class="hero__stats">
-              <div>
-                <div class="hero__stat-value">全港</div>
-                <div class="hero__stat-label">服務範圍覆蓋</div>
-              </div>
-              <div>
-                <div class="hero__stat-value">中原地產</div>
-                <div class="hero__stat-label">所屬代理公司</div>
-              </div>
-              <div>
-                <div class="hero__stat-value">4 類</div>
-                <div class="hero__stat-label">客戶專項服務</div>
-              </div>
-              <div>
-                <div class="hero__stat-value">S-514216</div>
-                <div class="hero__stat-label">EAA 持牌號碼</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    <a href="https://wa.me/85292528833" class="nav__wa" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    </a>
+  </nav>
 
-      <!-- Services -->
-      <section class="section section--alt">
-        <div class="container">
-          <div class="section__header">
-            <div class="section__eyebrow">專業服務</div>
-            <h2 class="section__title">為不同需求的買家提供度身訂造方案</h2>
-            <p class="section__subtitle">無論你是第一次買樓還是資深投資者，我都能為你提供最適切的建議和服務。</p>
-          </div>
-          <div class="services-grid">
-            <div class="service-card">
-              <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/><path d="M9 9h.01M15 9h.01"/></svg>
-              <h3 class="service-card__title">首次置業</h3>
-              <p class="service-card__desc">從按揭預算計算、稅務優惠、到睇樓選區，一步步帶你完成人生首個物業交易。首置客可享從價印花稅優惠，最高按揭成數可達九成。</p>
-            </div>
-            <div class="service-card">
-              <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"/></svg>
-              <h3 class="service-card__title">換樓策略</h3>
-              <p class="service-card__desc">先買後賣或先賣後買，各有利弊。我會根據你的財務狀況、時間表及市場行情，制定最佳換樓方案，減少風險及稅務支出。</p>
-            </div>
-            <div class="service-card">
-              <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-              <h3 class="service-card__title">物業投資</h3>
-              <p class="service-card__desc">提供專業租金回報分析、各區升值潛力評估、租客配對服務，協助你做出明智的投資決定，建立穩健的物業組合。</p>
-            </div>
-            <div class="service-card">
-              <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-              <h3 class="service-card__title">內地來港置業</h3>
-              <p class="service-card__desc">專為內地客戶提供服務，涵蓋高才通 / 優才計劃置業安排、稅務規劃、按揭申請及後續管理。提供普通話溝通服務，助你順利完成香港置業。</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Featured Articles Preview -->
-      <section class="section">
-        <div class="container">
-          <div class="section__header">
-            <div class="section__eyebrow">地產資訊</div>
-            <h2 class="section__title">最新市場分析與置業指南</h2>
-            <p class="section__subtitle">深入了解香港各區樓市動態、按揭政策及買賣策略。</p>
-          </div>
-          <div class="articles-grid">
-            <a href="#" onclick="showArticle('first-time');return false;" class="article-card">
-              <div class="article-card__img" style="background: linear-gradient(135deg, var(--color-primary), var(--color-accent)); display:flex; align-items:center; justify-content:center; color:#fff; font-family:var(--font-display); font-size:var(--text-lg);">首次置業</div>
-              <div class="article-card__body">
-                <div class="article-card__tag">置業指南</div>
-                <h3 class="article-card__title">2026年首次置業完全攻略</h3>
-                <p class="article-card__excerpt">從預算計算、按揭申請到完成交易，一文了解首次買樓的每個步驟和注意事項。</p>
-                <div class="article-card__meta">梁愈德 · 2026年4月</div>
-              </div>
-            </a>
-            <a href="#" onclick="showArticle('stamp-duty');return false;" class="article-card">
-              <div class="article-card__img" style="background: linear-gradient(135deg, #1a3a5c, #2a5a8c); display:flex; align-items:center; justify-content:center; color:#fff; font-family:var(--font-display); font-size:var(--text-lg);">印花稅</div>
-              <div class="article-card__body">
-                <div class="article-card__tag">稅務知識</div>
-                <h3 class="article-card__title">香港買樓印花稅完全指南</h3>
-                <p class="article-card__excerpt">從價印花稅、額外印花稅、買家印花稅，一文睇清各種稅項計算方法。</p>
-                <div class="article-card__meta">梁愈德 · 2026年4月</div>
-              </div>
-            </a>
-            <a href="#" onclick="showArticle('mainland-buyer');return false;" class="article-card">
-              <div class="article-card__img" style="background: linear-gradient(135deg, #c49a3c, #8c6d22); display:flex; align-items:center; justify-content:center; color:#fff; font-family:var(--font-display); font-size:var(--text-lg);">內地置業</div>
-              <div class="article-card__body">
-                <div class="article-card__tag">跨境置業</div>
-                <h3 class="article-card__title">內地居民來港買樓須知</h3>
-                <p class="article-card__excerpt">稅務安排、按揭限制、身份資格、高才通買樓優惠，一站式了解。</p>
-                <div class="article-card__meta">梁愈德 · 2026年4月</div>
-              </div>
-            </a>
-          </div>
-          <div style="text-align:center; margin-top:var(--space-8);">
-            <a href="#" href="/info.html" class="btn btn--outline">瀏覽所有文章</a>
-          </div>
-        </div>
-      </section>
-
-      <!-- CTA -->
-      <section class="section">
-        <div class="container container--narrow" style="text-align:center;">
-          <h2 class="section__title" style="margin-bottom:var(--space-3);">準備好置業或換樓？</h2>
-          <p class="section__subtitle" style="margin-inline:auto; margin-bottom:var(--space-6);">無論你有任何物業疑問，歡迎隨時 WhatsApp 我，免費諮詢，零壓力。</p>
-          <div class="hero__cta-group" style="justify-content:center;">
-            <a href="https://wa.me/85292528833?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2%E7%89%A9%E6%A5%AD%E8%B3%87%E8%A8%8A" class="btn btn--whatsapp" target="_blank" rel="noopener noreferrer">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp 即時查詢
-            </a>
-            <a href="tel:+85292528833" class="btn btn--outline">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              致電 92528833
-            </a>
-          </div>
-        </div>
-      </section>
+  <div class="hero">
+    <img src="/jeff-og.jpg" class="hero__photo" alt="梁愈德 Jeff Leung">
+    <div class="hero__name">梁愈德 Jeff Leung</div>
+    <div class="hero__license">中原地產代理 · 牌照 S-514216</div>
+    <div class="hero__tags">
+      <span class="hero__tag">九龍塘</span>
+      <span class="hero__tag">何文田</span>
+      <span class="hero__tag">京士柏</span>
+      <span class="hero__tag">屋苑深度評析</span>
     </div>
+  </div>
 
-    <!-- ===== ARTICLES LIST PAGE ===== -->
-    
-  </main>
+  <div class="stats">
+    <div class="stat"><div class="stat__num">94</div><div class="stat__label">篇文章</div></div>
+    <div class="stat"><div class="stat__num">3</div><div class="stat__label">主要地區</div></div>
+    <div class="stat"><div class="stat__num">10+</div><div class="stat__label">年經驗</div></div>
+  </div>
 
-
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__inner">
-        <div class="footer__brand">
-          <a href="/" class="header__logo" style="margin-bottom:var(--space-2);">
-            <svg width="28" height="28" viewBox="0 0 36 36" fill="none" aria-hidden="true">
-              <rect width="36" height="36" rx="8" fill="var(--color-primary)"/>
-              <path d="M8 22V14l10-6 10 6v8" stroke="var(--color-text-inverse)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M14 22v-6h8v6" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span class="header__logo-text" style="font-size:var(--text-base);">梁愈德 Jeff Leung</span>
-          </a>
-          <p>中原地產持牌營業員（S-514216）。為全港客戶提供住宅物業買賣、租賃及投資顧問服務。</p>
-        </div>
-        <div>
-          <div class="footer__col-title">快速連結</div>
-          <ul class="footer__links" role="list">
-            <li><a href="/">首頁</a></li>
-            <li><a href="#" href="/info.html">地產資訊</a></li>
-                        <li><a href="#" href="/about.html">關於我</a></li>
-            <li><a href="#" href="/contact.html">聯絡</a></li>
-          </ul>
-        </div>
-        <div>
-          <div class="footer__col-title">聯絡方式</div>
-          <ul class="footer__links" role="list">
-            <li><a href="https://wa.me/85292528833" target="_blank" rel="noopener noreferrer">WhatsApp: 92528833</a></li>
-            <li><a href="tel:+85292528833">電話: +852 9252 8833</a></li>
-            <li><a href="mailto:leungjeffreyyutak1992@gmail.com">電郵聯絡</a></li>
-            <li><a href="https://www.eaa.org.hk" target="_blank" rel="noopener noreferrer">EAA 牌照查核</a></li>
-          </ul>
-        </div>
+  <div class="section-label">最新文章</div>
+  <div class="card-list">
+    <a class="card" href="/ka-lin.html">
+      <div class="card__img">嘉琳</div>
+      <div class="card__body">
+        <div class="card__tag">屋苑深度評析</div>
+        <div class="card__title">嘉琳：九龍塘唯一有電梯洋房，紐約Townhouse概念在香港的完美實踐</div>
+        <div class="card__meta">梁愈德 · 2026年5月</div>
       </div>
-      <div class="footer__bottom">
-        <p>&copy; 2026 梁愈德 Jeff Leung. 中原地產 Centaline Property Agency. 牌照號碼 S-514216.</p>
+    </a>
+    <a class="card" href="/whitesand-cove.html">
+      <div class="card__img">Whitesand Cove</div>
+      <div class="card__body">
+        <div class="card__tag">屋苑深度評析</div>
+        <div class="card__title">Whitesand Cove：白沙灣15年來唯一臨海新盤，你買的不是投資，是一種生活方式</div>
+        <div class="card__meta">梁愈德 · 2026年5月</div>
       </div>
+    </a>
+    <a class="card" href="/park-college.html">
+      <div class="card__img">Park College</div>
+      <div class="card__body">
+        <div class="card__tag">屋苑深度評析</div>
+        <div class="card__title">Park College：書院道8號，九龍城邊皮地段的向南迷思與真實居住價值</div>
+        <div class="card__meta">梁愈德 · 2026年5月</div>
+      </div>
+    </a>
+  </div>
+  <a class="view-all" href="/info.html">查看全部 94 篇文章 →</a>
+
+  <div class="section-label">YouTube 頻道</div>
+  <div class="yt-section">
+    <a class="yt-card" href="https://www.youtube.com/@jeffleung2131" target="_blank" rel="noopener noreferrer">
+      <div class="yt-card__thumb">
+        <div class="yt-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      </div>
+      <div class="yt-card__body">
+        <div class="yt-card__label">YouTube · @jeffleung2131</div>
+        <div class="yt-card__title">九龍塘 · 何文田 · 京士柏 地產分析頻道</div>
+      </div>
+    </a>
+  </div>
+
+  <div class="float-bar">
+    <a class="float-btn" href="https://www.youtube.com/@jeffleung2131" target="_blank" rel="noopener noreferrer">
+      <div class="float-btn__icon float-btn__icon--yt"><svg viewBox="0 0 24 24" width="14" height="14" fill="#fff"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></div>
+      <span class="float-btn__label">YouTube</span>
+    </a>
+    <a class="float-btn" href="https://hk.centanet.com/findproperty/agent-detail/Jeff-Leung_39184/info" target="_blank" rel="noopener noreferrer">
+      <div class="float-btn__icon float-btn__icon--ct">中原</div>
+      <span class="float-btn__label">中原代理<br>檔案</span>
+    </a>
+    <a class="float-btn" href="/about.html">
+      <div class="float-btn__icon float-btn__icon--me"><svg viewBox="0 0 24 24" width="14" height="14" fill="#fff"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg></div>
+      <span class="float-btn__label">關於我</span>
+    </a>
+    <a class="float-btn" href="/info.html">
+      <div class="float-btn__icon float-btn__icon--srch"><svg viewBox="0 0 24 24" width="14" height="14" fill="#fff"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></div>
+      <span class="float-btn__label">搜尋<br>文章</span>
+    </a>
+  </div>
+
+  <div class="sticky-cta">
+    <img src="/jeff-demo.jpg" class="sticky-cta__avatar" alt="Jeff">
+    <div style="flex:1">
+      <div class="sticky-cta__name">梁愈德 Jeff Leung</div>
+      <div class="sticky-cta__license">中原地產 · S-514216 · +852-9252-8833</div>
     </div>
-  </footer>
-
-  <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/85292528833?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2%E7%89%A9%E6%A5%AD%E8%B3%87%E8%A8%8A" class="fab-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp 查詢">
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  </a>
-
-    <script>
-    // Mobile nav toggle
-    document.getElementById('navToggle')?.addEventListener('click', function() {
-      document.getElementById('mainNav').classList.toggle('is-open');
-    });
-    // Dark mode
-    const toggle = document.getElementById('darkToggle');
-    if (toggle) {
-      if (localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-theme','dark');
-      toggle.addEventListener('click', () => {
-        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-        document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
-        localStorage.setItem('theme', isDark ? 'light' : 'dark');
-      });
-    }
-  </script>
+    <a href="https://wa.me/85292528833" class="sticky-cta__btn" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      WhatsApp 查詢
+    </a>
+  </div>
 
 </body>
 </html>
