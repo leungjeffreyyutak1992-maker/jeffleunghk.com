@@ -1,0 +1,457 @@
+/* ============================================================
+   wa-article.css — WhatsApp Design Override for Article Pages
+   Injected after base.css + style.css
+   All article pages auto-inherit this style
+   ============================================================ */
+
+/* ===== FONTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap');
+
+/* ===== RESET BODY & BACKGROUND ===== */
+body {
+  font-family: -apple-system, 'Helvetica Neue', 'Noto Sans TC', Arial, sans-serif !important;
+  background-color: #ECE5DD !important;
+  background-image: url('wa-bg.jpg') !important;
+  background-size: 320px auto !important;
+  background-attachment: fixed !important;
+  background-repeat: repeat !important;
+  color: #111B21 !important;
+  padding-top: 64px !important; /* nav height offset */
+}
+
+/* ===== HIDE OLD NAV ===== */
+nav.nav {
+  display: none !important;
+}
+
+/* ===== INJECTED WA NAV (via wa-article.js) ===== */
+#wa-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: #075E54;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+#wa-nav .wa-nav__left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  text-decoration: none;
+}
+
+#wa-nav .wa-nav__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,0.3);
+  flex-shrink: 0;
+}
+
+#wa-nav .wa-nav__info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+#wa-nav .wa-nav__name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+}
+
+#wa-nav .wa-nav__sub {
+  font-size: 11px;
+  color: rgba(255,255,255,0.78);
+  white-space: nowrap;
+}
+
+#wa-nav .wa-nav__right {
+  display: flex;
+  align-items: center;
+}
+
+#wa-nav .wa-nav__wa-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.15);
+  border-radius: 50%;
+  text-decoration: none;
+  transition: background 0.18s;
+}
+
+#wa-nav .wa-nav__wa-btn:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+#wa-nav .wa-nav__wa-btn svg {
+  width: 22px;
+  height: 22px;
+  fill: #fff;
+}
+
+/* ===== ARTICLE HEADER SECTION ===== */
+.article-header {
+  margin-top: 0;
+  padding: 32px 0 28px;
+}
+
+.article-header .container {
+  max-width: 960px;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.18);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 13px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-bottom: 16px;
+  transition: background 0.18s;
+}
+
+.back-btn:hover {
+  background: rgba(255,255,255,0.28);
+}
+
+.article-header__tag {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.75);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
+}
+
+.article-header__title {
+  font-size: clamp(18px, 2.5vw, 26px);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  text-wrap: balance;
+}
+
+.article-header__meta {
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
+}
+
+/* ===== ARTICLE BODY ===== */
+.article-body {
+  padding: 24px 0 100px;
+}
+
+.article-body .container {
+  max-width: 960px;
+}
+
+.article-container {
+  background: #fff;
+  border-radius: 12px;
+  padding: clamp(20px, 5vw, 44px);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+}
+
+/* ===== TYPOGRAPHY ===== */
+.article-container p {
+  font-size: 15px;
+  line-height: 1.85;
+  color: #111B21;
+  margin-bottom: 16px;
+  max-width: 72ch;
+}
+
+.article-container h2 {
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 700;
+  color: #075E54;
+  margin-top: 36px;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #25D366;
+  font-family: -apple-system, 'Helvetica Neue', 'Noto Sans TC', Arial, sans-serif;
+}
+
+.article-container h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111B21;
+  margin-top: 24px;
+  margin-bottom: 10px;
+}
+
+.article-container strong {
+  color: #075E54;
+  font-weight: 700;
+}
+
+.article-container ul,
+.article-container ol {
+  padding-left: 22px;
+  margin-bottom: 16px;
+}
+
+.article-container li {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #111B21;
+  margin-bottom: 6px;
+}
+
+.article-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 14px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.article-container th {
+  background: #075E54;
+  color: #fff;
+  padding: 10px 14px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.article-container td {
+  padding: 9px 14px;
+  border-top: 1px solid #f0f0f0;
+  color: #111B21;
+}
+
+.article-container tr:nth-child(even) td {
+  background: #f8fffe;
+}
+
+/* ===== CONTACT BLOCK inside article ===== */
+.contact-block {
+  background: linear-gradient(135deg, #075E54, #128C7E);
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 32px;
+  text-align: center;
+}
+
+.contact-block p {
+  color: rgba(255,255,255,0.9) !important;
+  margin-bottom: 14px;
+  font-size: 15px;
+}
+
+.contact-block .btn,
+.contact-block .btn--primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #25D366;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 12px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.18s, transform 0.15s;
+}
+
+.contact-block .btn:hover,
+.contact-block .btn--primary:hover {
+  background: #20bd5a;
+  transform: translateY(-1px);
+}
+
+/* ===== HIDE OLD FOOTER ===== */
+footer.footer {
+  display: none !important;
+}
+
+/* ===== HIDE OLD FLOATING WHATSAPP ===== */
+a.whatsapp-float {
+  display: none !important;
+}
+.fab-whatsapp {
+  display: none !important;
+}
+
+/* ===== INJECTED FLOATING BUTTON BAR (via wa-article.js) ===== */
+#wa-fab-bar {
+  position: fixed;
+  right: 16px;
+  bottom: 96px; /* above sticky CTA */
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.wa-fab-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.22);
+  transition: transform 0.18s, box-shadow 0.18s;
+  position: relative;
+}
+
+.wa-fab-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 16px rgba(0,0,0,0.3);
+}
+
+.wa-fab-btn svg {
+  width: 22px;
+  height: 22px;
+  fill: #fff;
+  flex-shrink: 0;
+}
+
+.wa-fab-btn--yt   { background: #FF0000; }
+.wa-fab-btn--cen  { background: #E07B00; }
+.wa-fab-btn--about { background: #075E54; }
+.wa-fab-btn--info  { background: #25D366; }
+
+/* Tooltip */
+.wa-fab-btn::before {
+  content: attr(data-tip);
+  position: absolute;
+  right: 56px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.75);
+  color: #fff;
+  font-size: 12px;
+  white-space: nowrap;
+  padding: 4px 10px;
+  border-radius: 6px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.wa-fab-btn:hover::before {
+  opacity: 1;
+}
+
+/* ===== INJECTED STICKY BOTTOM CTA (via wa-article.js) ===== */
+#wa-sticky-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 80;
+  background: #fff;
+  border-top: 1px solid #e0e0e0;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 -2px 12px rgba(0,0,0,0.10);
+}
+
+#wa-sticky-cta img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+#wa-sticky-cta .wa-cta__text {
+  flex: 1;
+  min-width: 0;
+}
+
+#wa-sticky-cta .wa-cta__name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111B21;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#wa-sticky-cta .wa-cta__sub {
+  font-size: 11px;
+  color: #667781;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#wa-sticky-cta .wa-cta__btn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #25D366;
+  color: #fff;
+  border-radius: 22px;
+  padding: 9px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.18s;
+  white-space: nowrap;
+}
+
+#wa-sticky-cta .wa-cta__btn:hover {
+  background: #20bd5a;
+}
+
+#wa-sticky-cta .wa-cta__btn svg {
+  width: 18px;
+  height: 18px;
+  fill: #fff;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .article-container {
+    padding: 18px 16px 24px;
+    border-radius: 10px;
+  }
+
+  .article-body {
+    padding: 16px 0 100px;
+  }
+
+  .article-body .container {
+    padding-inline: 10px;
+  }
+
+  #wa-sticky-cta .wa-cta__name {
+    font-size: 13px;
+  }
+
+  #wa-sticky-cta .wa-cta__btn {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+}
