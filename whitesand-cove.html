@@ -39,21 +39,32 @@
   <script src="wa-article.js" defer></script>
 </head>
 <body>
-  <nav class="site-nav">
-    <a href="/" class="site-nav__logo">Jeff Leung</a>
-    <a href="/info.html" class="site-nav__link">所有文章</a>
+  <!-- ===== NAV ===== -->
+  <nav class="nav">
+    <div class="nav__inner container">
+      <a class="nav__logo" href="/">梁愈德 Jeff Leung</a>
+      <ul class="nav__links">
+        <li><a href="/">主頁</a></li>
+        <li><a href="/info.html">地產資訊</a></li>
+        <li><a href="/about.html">關於我</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <article class="article-layout">
-    <header class="article-hero" style="background: linear-gradient(135deg, #0A2A3C, #1A5C4A);">
-      <div class="article-hero__inner">
-        <div class="article-hero__tag">屋苑深度評析</div>
-        <h1 class="article-hero__title">Whitesand Cove：白沙灣15年來唯一臨海新盤，你買的不是投資，是一種生活方式</h1>
-        <div class="article-hero__meta">梁愈德 · 2026年5月</div>
-      </div>
-    </header>
+  <!-- ===== ARTICLE HEADER ===== -->
+  <div class="article-header" style="background: linear-gradient(135deg, #0A2A3C, #1A5C4A);">
+    <div class="container">
+      <button class="back-btn" onclick="location.href='/info.html'">← 返回地產資訊</button>
+      <div class="article-header__tag">屋苑深度評析</div>
+      <h1 class="article-header__title">Whitesand Cove：白沙灣15年來唯一臨海新盤，你買的不是投資，是一種生活方式</h1>
+      <div class="article-header__meta">梁愈德 Jeff Leung · 2026年5月</div>
+    </div>
+  </div>
 
-    <div class="article-body">
+  <!-- ===== ARTICLE BODY ===== -->
+  <div class="article-body">
+    <div class="container">
+      <div class="article-container">
 
       <h2>引言：稀有的代價是什麼</h2>
       <p>Whitesand Cove是白沙灣近15年來唯一一個臨海地皮項目，這個定性不是行銷語言，而是有地理依據的事實——白沙灣一帶的臨海地皮在過去十多年幾乎沒有新供應，市場上能夠以全新狀態提供臨海居住體驗的選擇，在整個西貢以至香港離島以外地區的範圍內，數量極為有限。40伙，全部100%海景，前方2,300米無遮擋直視白沙灣海面，這個條件在香港住宅市場的稀有程度是真實的。但稀有本身不等於所有人都應該買，這篇文章要討論的，正是這個稀有代價背後，誰真正適合住，誰應該清醒地放棄。</p>
@@ -115,13 +126,30 @@
       <p>我第一次接觸Whitesand Cove的時候，第一個感受是這個項目的目標買家輪廓清晰程度，在香港住宅市場中屬罕見。大部分新盤的設計是試圖吸引盡可能廣泛的買家群體，間隔中規中矩，地段講求通勤便利，校網盡量配合中產家庭需求。Whitesand Cove幾乎完全放棄了這個方向——校網95，無鐵路，巨廳細房，洋房只有3房，車位1:1。這些「限制」在大部分新盤的語境中是明確的缺點，但在Whitesand Cove的語境中，每一個「缺點」背後都有一個清晰的取捨邏輯：校網差是因為地在西貢，無鐵路是因為選了臨海地皮，巨廳細房是因為廳要面海，洋房3房是因為面積用在私人電梯和車庫上。這個項目的設計決策是有系統的，不是隨機的。</p>
       <p>但我對買家最想說的一句話是：買這個項目之前，你需要誠實回答自己一個問題——你買它是因為你真的想住在西貢海邊過那種生活，還是因為它看起來很特別所以心動？前者是合理的入市理由，後者在幾年後需要賣樓的時候，面對市場折讓時會是一個非常痛苦的現實。香港的住宅市場有很多「特別」的選擇，但特別和適合是兩回事，分清楚這兩件事，才是置業最重要的基本功。</p>
 
-      <div class="article-contact">
-        <p>如有查詢，歡迎聯絡梁愈德 Jeff Leung<br>
-        中原地產｜牌照號碼 S-514216<br>
-        <a href="https://wa.me/85292528833" target="_blank">WhatsApp：+852 9252 8833</a></p>
-      </div>
+        <!-- 聯絡 -->
+        <div class="contact-block">
+          <p>如有查詢或希望了解 Whitesand Cove 的最新市場動態，歡迎直接聯絡梁愈德 Jeff Leung。</p>
+          <a href="https://wa.me/85292528833" class="btn btn--primary" target="_blank" rel="noopener">WhatsApp 查詢</a>
+        </div>
 
+      </div>
     </div>
-  </article>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 梁愈德 Jeff Leung · 中原地產 · 牌照號碼 S-514216</p>
+      <p>本網站內容僅供參考，不構成任何買賣建議。</p>
+    </div>
+  </footer>
+
+  <!-- ===== WHATSAPP FLOATING BUTTON ===== -->
+  <a href="https://wa.me/85292528833" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
 </body>
 </html>
