@@ -10,11 +10,8 @@
 /* ===== RESET BODY & BACKGROUND ===== */
 body {
   font-family: -apple-system, 'Helvetica Neue', 'Noto Sans TC', Arial, sans-serif !important;
-  background-color: #ECE5DD !important;
-  background-image: url('wa-bg.jpg') !important;
-  background-size: 320px auto !important;
-  background-attachment: fixed !important;
-  background-repeat: repeat !important;
+  background-color: #FFFFFF !important;
+  background-image: none !important;
   color: #111B21 !important;
   padding-top: 64px !important; /* nav height offset */
 }
